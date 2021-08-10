@@ -1,5 +1,7 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+@import "~bootstrap/scss/bootstrap.scss";
+
 /* 
 
     You can write your own styles here...
@@ -11,3 +13,73 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+
+
+body{
+    
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: auto;
+    background-image: url(https://images.pexels.com/photos/1532768/pexels-photo-1532768.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    
+}
+
+
+.semaphore{
+
+    margin-right: 27vw;
+    margin-top: 6vw;
+    width: 10rem; 
+    height: 16rem; 
+    border: 3px solid #555;
+    background: rgb(184, 184, 42);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20%;
+}
+
+.Led{
+
+height: 4.5rem;
+  width: 4.5rem;
+  background-color: #bbb;
+  border-radius: 50%;
+    display: flex;
+
+}
+
+.yellow {
+
+    background-color: rgb(255, 255, 0);
+
+}
+
+.red{
+
+    background-color:red;
+
+
+}
+
+.green{
+
+    background-color: green;
+
+
+}
+
+.glow{
+
+    box-shadow: 0px 10px 40px 20px #0ff;
+}
+
+
+.dark{
+    background-color: black;
+
+}

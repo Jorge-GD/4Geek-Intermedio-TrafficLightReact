@@ -1,26 +1,41 @@
-import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import React, { Fragment } from "react";
+import { useState } from "react";
+import Light from "./light.jsx";
 
 //create your first component
-const Home = () => {
-	return (
-		<div className="text-center mt-5">
-			<h1>Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
-};
 
-export default Home;
+export function Home() {
+	const [stop, setStop] = useState("dark");
+	const [warning, setWarning] = useState("dark");
+	const [got, setGo] = useState("dark");
+
+	const onPut = numb => {
+		if (numb == 1) {
+			setStop("red glow");
+			setWarning("dark");
+			setGo("dark");
+		} else if (numb == 2) {
+			setStop("dark");
+			setWarning("yellow glow");
+			setGo("dark");
+		} else if (numb == 3) {
+			setStop("dark");
+			setWarning("dark");
+			setGo("green glow");
+		} else {
+			setStop("dark");
+			setWarning("dark");
+			setGo("dark");
+		}
+	};
+
+	return (
+		<Fragment>
+			<div className="semaphore">
+				<Light color={stop} start={onPut} bolt={1} />
+				<Light color={warning} start={onPut} bolt={2} />
+				<Light color={got} start={onPut} bolt={3} />
+			</div>
+		</Fragment>
+	);
+}
